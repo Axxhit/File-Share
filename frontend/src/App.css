@@ -1,0 +1,210 @@
+/* Base Reset and Root Container */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-container {
+  min-height: 100vh;
+  width: 100vw;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff);
+}
+
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #3730a3;
+  color: #fff;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(55, 48, 163, 0.08);
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #c7d2fe;
+}
+
+/* Card Style */
+.main-card {
+  background: #fff;
+  padding: 2.5rem 2rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(60, 72, 180, 0.12);
+  margin: 2.5rem 0 2rem;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #3730a3;
+  text-align: center;
+}
+
+.subtitle {
+  color: #4b5563;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Upload Button */
+.upload-btn {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.upload-btn:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+.upload-btn:hover:not(:disabled) {
+  background: #4338ca;
+  transform: scale(1.02);
+}
+
+/* Result Section */
+.result-section {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.result-section a {
+  color: #2563eb;
+  word-break: break-word;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Info Cards: Features & How-To */
+.features-section,
+.howto-section {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(60, 72, 180, 0.08);
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 420px;
+  width: 100%;
+}
+
+.features-section h2,
+.howto-section h2 {
+  color: #3730a3;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.features-section ul,
+.howto-section ol {
+  color: #4b5563;
+  font-size: 1.05rem;
+  margin-left: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.landing-footer {
+  margin-top: auto;
+  color: #6b7280;
+  font-size: 1rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .main-card,
+  .features-section,
+  .howto-section {
+    padding: 1.2rem 0.8rem;
+    max-width: 95vw;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .upload-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.spinner {
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 3px solid #fff;
+  border-top: 3px solid #4338ca;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
