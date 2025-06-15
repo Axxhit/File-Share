@@ -3,6 +3,7 @@ import Connection from "./database/db.js";
 import router from "./routes/api.js";
 import cors from "cors";
 import path from "path";
+import dotenv from "dotenv";
 // Importing necessary modules
 // express for creating the server
 
