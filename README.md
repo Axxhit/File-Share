@@ -1,4 +1,4 @@
-# File Sharing Website
+# File Sharing Application
 A website that helps to provide a shareable link
 
 ## Installation
