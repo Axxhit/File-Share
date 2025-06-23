@@ -5,7 +5,7 @@ A website that helps to provide a shareable link
 
 1. Clone the repository:
 ```
-git clone https://github.com/your-username/file-sharing-app.git
+git clone https://github.com/axxhit/Share-Cloud.git
 ```
 2. Install the dependencies:
 ```
